@@ -6,24 +6,32 @@
 -->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="./styles.css">
-    <title>Game Jam - Word Something</title>
-
-</head>
-<body>
-    <article>
-        <section>
-            <h1>Game heading</h1>
-            <div id="container">
-
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="stylesheet" href="./styles.css">
+        <title>Space Scramble</title>
+    </head>
+    <body>
+        <div class="stars"></div>
+        <div class="twinkle"></div>
+        <div class="main">
+            <div class="logo">
+                <h1>Space Scramble</h1>
             </div>
-        </section>
-    </article>
-
-<script src="./scripts.js"></script>
-</body>
+            <div class="options">
+                <button>Start Game</button>
+                <button>Modes</button>
+                <button>Leaderboards</button>
+                <button>How To Play</button>
+            </div>
+        </div>
+        <div id="player">
+            <audio autoplay hidden>
+                <source src="music/spacemusic.mp3" type="audio/mpeg">
+            </audio>
+        </div>        
+        <script src="./scripts.js"></script>
+    </body>
 </html>
