@@ -21,7 +21,46 @@
     src: url('fonts/Orbitron-SemiBold.ttf'); 
 } 
 
-.main {
+@font-face { 
+    font-family: Temphis; 
+    src: url('fonts/temphis.sweatermonkey.ttf'); 
+} 
+
+@font-face { 
+    font-family: Roboto; 
+    src: url('fonts/Roboto-Regular.ttf'); 
+} 
+
+#left {
+    display: flex;
+    width: 50%;
+}
+#right {
+    width: 50%;
+    text-align: right;
+}
+
+header {
+    height: 50%;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 30px;
+    list-style-type: none;
+}
+
+.menutext {
+    border: none;
+}
+
+.menutext:hover {
+    font-family: Temphis;
+    font-size: x-large;
+}
+
+#main {
     position: absolute;
     left: 50%;
     top: 45%;
@@ -31,11 +70,19 @@
     font-family: GalaxyReg;
     font-size: xxx-large;
     text-align: center;
+    display: block;
 }
 
-.options {
+.currentsettings {
+    font-family: Orbitron;
+    font-size: 10px;
+    margin-bottom: 30px;
+    margin-top: 15px;
+}
+
+#options, #modesoptions, #gradeoptions{
     margin: auto;
-    margin-top: 50px;
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
     width: 40%;
@@ -52,9 +99,13 @@ button {
     border: 3px solid white;
 }
 
-button:hover {
-    background-color: white;
-    color: black;
+#main button {
+    width: 100%;
+}
+
+#options button:hover, #modesoptions button:hover, #gradeoptions button:hover, .backbutton:hover, #submit:hover{
+    background-color: white !important;
+    color: black !important; 
 }
 
 @keyframes move-twinkle-back {
@@ -81,4 +132,116 @@ button:hover {
 .twinkle {
     background: transparent url(images/twinkling.png) repeat top center;
     animation: move-twinkle-back 200s linear infinite;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: block;
+}
+
+footer ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 30px;
+    list-style-type: none;
+}
+
+#options {
+    display: block;
+}
+
+#modesoptions {
+    display: none;
+}
+
+#gradeoptions {
+    display: none;
+}
+
+#pauser {
+    display: none;
+}
+
+#player {
+    display: block;
+}
+
+
+#rules {
+    position: absolute;
+    display: none;
+    left: 50%;
+    top: 45%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+#rules h1 {
+    font-family: Orbitron;
+    font-size: xxx-large;
+    text-align: center;
+    margin-bottom: 50px;
+    margin-top: 40px;
+}
+
+#rules p {
+    font-family: Roboto;
+}
+
+.backbutton{
+    width: 20%;
+}
+
+#login {
+    color: white;
+    font-family: Orbitron;
+    font-size: large;
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    display: none;
+    width: 50%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#login h1 {
+    margin-top: 50px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+input {
+    font-family: Orbitron;
+    margin: 10px;
+    padding: 20px;
+    background-color: transparent;
+    color: white;
+    border: 3px solid white;
+    border-radius: 30px;
+    width: 80%;
+}
+
+::placeholder {
+    color: rgb(207, 207, 207);
+}
+
+#submit {
+    margin-top: 40px;
+    width: 50%;
+
+}
+
+input:focus {
+    outline-width: 0;
 }

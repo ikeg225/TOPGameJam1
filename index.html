@@ -16,22 +16,74 @@
     <body>
         <div class="stars"></div>
         <div class="twinkle"></div>
-        <div class="main">
-            <div class="logo">
+        <header id="headermenu">
+            <nav id="left">
+                <img src="images/start.png" alt="Music Start" width="38" height="38" id="player" onclick="music()">
+                <img src="images/pause.png" alt="Music Stop" width="38" height="38" id="pauser" onclick="music()">
+            </nav>
+            <nav id="right">
+                <button class="menutext"; onclick="logindisplay()">Login | Sign Up</button>
+            </nav>
+        </header>
+        <div id="main">
+            <div>
                 <h1>Space Scramble</h1>
             </div>
-            <div class="options">
+            <div class="currentsettings">
+                <h2 id="modesetting">Mode: Word Scramble</h2>
+                <h2 id="gradesetting">Grade: Pre-K</h2>
+            </div>
+
+            <div class="mainoverlay"; id="options">
                 <button>Start Game</button>
-                <button>Modes</button>
-                <button>Leaderboards</button>
-                <button>How To Play</button>
+                <button id="modebutton"; onclick="gamehighlight()">Modes</button>
+                <button id="gradebutton"; onclick="gradehighlight()">Grade Level</button>
+            </div>
+
+            <div class="modes"; id="modesoptions">
+                <button id="back1"><< Back</button>
+                <button id="Word Scramble"; onclick="mode(this.id)">Word Scramble</button>
+                <button id="Math Scramble"; onclick="mode(this.id)">Math Scramble</button>
+            </div>
+
+            <div class="grades"; id="gradeoptions">
+                <button id="back2"><< Back</button>
+                <button id="Pre-K"; onclick="gradelevel(this.id)">Pre-K</button>
+                <button id="1-2"; onclick="gradelevel(this.id)">1-2</button>
+                <button id="3-4"; onclick="gradelevel(this.id)">3-4</button>
+                <button id="5-6"; onclick="gradelevel(this.id)">5-6</button>
             </div>
         </div>
-        <div id="player">
-            <audio autoplay hidden>
-                <source src="music/spacemusic.mp3" type="audio/mpeg">
-            </audio>
-        </div>        
+        <div id="rules">
+            <button class="backbutton" onclick="backwards()"><< Back</button>
+            <h1>How To Play</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse mauris ligula, aliquet ut dapibus quis, aliquam nec tortor. Fusce scelerisque vulputate ipsum sit amet interdum. Nullam vel justo orci. Nulla facilisi. In hendrerit egestas leo, id hendrerit dui congue ut. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla sodales magna ac molestie sollicitudin. Fusce tincidunt posuere euismod. Proin pretium orci at arcu aliquet, in ultricies eros pellentesque. Integer malesuada lectus ac gravida volutpat. Proin sollicitudin faucibus porta. Nulla eu arcu ipsum. In lobortis mi at lacinia mattis. Cras non orci imperdiet, viverra lorem ut, feugiat sem. Ut sollicitudin, ligula et pretium pulvinar, nibh nulla faucibus velit, quis volutpat diam felis vitae ipsum.</p>
+            <br>
+            <p>Curabitur aliquam ut neque eget vulputate. In hac habitasse platea dictumst. Curabitur molestie sollicitudin ante at blandit. Mauris metus justo, malesuada consectetur risus non, viverra commodo felis. Aliquam id lacus in nunc aliquet facilisis ut sit amet massa. Pellentesque ornare felis ut lacus scelerisque aliquam. Quisque vestibulum ipsum cursus, sodales erat vel, efficitur massa. Quisque eu tortor at orci pharetra pellentesque vel a arcu. Donec fermentum at augue non feugiat.</p>
+            <br>
+            <p>Sed facilisis mattis turpis vel ultricies. Donec accumsan augue ac dolor blandit venenatis. Donec sit amet odio non est mattis mollis. Quisque ex leo, suscipit vel leo molestie, cursus placerat lorem. Maecenas tempus urna turpis. Quisque condimentum elit erat, id ornare orci rutrum ut. Sed et urna libero. Fusce eget pellentesque sapien. Nam lobortis purus ac sem malesuada, ut viverra erat sodales. Vestibulum sed lacus nibh. Etiam porta tempor ullamcorper. In est erat, ornare sed iaculis nec, ullamcorper eget lectus. Pellentesque semper diam aliquet, aliquam augue sed, maximus diam.</p>
+        </div>
+        <div id="login">
+            <button class="backbutton" onclick="backwards()"><< Back</button>
+            <h1>Login | Sign Up</h1>
+            <form>
+                <input type="text" id="name" name="name" placeholder="Name">
+                <input type="text" id="name" name="name" placeholder="Username">
+                <input type="text" id="name" name="name" placeholder="Email Address">
+                <input type="text" id="name" name="name" placeholder="Password">
+                <button id="submit">Submit</button>
+            </form>
+        </div>
+        <footer id="footervalues">
+            <ul>
+                <li><button class="menutext">Leaderboards</button></li>
+                <li><button class="menutext"; onclick="rulesdisplay()">How To Play</button></li>
+                <li><button class="menutext">Shop</button></li>
+            </ul>
+        </footer>
+        <audio autoplay loop id="backgroundsound">
+            <source src="music/spacemusic.mp3" type="audio/mpeg">
+        </audio> 
         <script src="./scripts.js"></script>
     </body>
 </html>
