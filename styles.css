@@ -174,10 +174,11 @@ footer ul {
     position: absolute;
     display: none;
     left: 50%;
-    top: 45%;
+    top: 50%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     color: white;
+
 }
 
 #rules h1 {
@@ -202,11 +203,16 @@ footer ul {
     font-size: large;
     position: absolute;
     left: 50%;
-    top: 45%;
+    top: 50%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     display: none;
     width: 50%;
+}
+
+#rules, #login {
+    max-height: 90vh;
+    overflow: auto;
 }
 
 form {
